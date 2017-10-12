@@ -2,7 +2,7 @@
 
 html {margin:0; width:100%; background-color: #504e4e;}
 p {font-family:"Impact",serif; color:white; size:16px;}
-.button { background-color: white;
+button { background-color: white;
 		  font-size: 20px;
 		  color: black;
 		  border: 2px inset black;
