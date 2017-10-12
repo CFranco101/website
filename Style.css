@@ -8,3 +8,7 @@ button { background-color: white;
 		  color: black;
 		  border: 2px inset black;
 }
+.hostbutton{ position: fixed;
+bottom: 350;
+right: 350;
+}
