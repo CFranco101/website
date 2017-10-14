@@ -2,13 +2,48 @@
 
 html {margin:0; width:100%; background-color: #504e4e;}
 p {font-family:"Impact",serif; color:white; size:16px;}
-button { background-color: white;
-		  font-size: 20px;
-		  font-family:"Impact",serif;
-		  color: black;
-		  border: 2px inset black;
+
+#hostButton {
+		position:fixed;
+		top:50%;
+		left:40%;
+		background-color: white;
+		font-size: 20px;
+		font-family:"Impact",serif;
+		color: black;
+		border: 2px inset black;
 }
-.hostbutton{ position: fixed;
-bottom: 350;
-right: 350;
+
+#backButton {
+		position:fixed;
+		top:5%;
+		left:5%;
+		margin: 10px;
+		background-color: white;
+		font-size: 20px;
+		font-family:"Impact",serif;
+		color: black;
+		border: 2px inset black;
+}
+
+#rulesButton {
+		position:fixed;
+		top:55%;
+		left:45%;
+		background-color: white;
+		font-size: 20px;
+		font-family:"Impact",serif;
+		color: black;
+		border: 2px inset black;
+}
+
+#joinButton {
+		position:fixed;
+		top:50%;
+		left:50%;
+		background-color: white;
+		font-size: 20px;
+		font-family:"Impact",serif;
+		color: black;
+		border: 2px inset black;
 }
