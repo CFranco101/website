@@ -3,47 +3,54 @@
 html {margin:0; width:100%; background-color: #504e4e;}
 p {font-family:"Impact",serif; color:white; size:16px;}
 
-#hostButton {
-		position:relative;
-		top: 480px;
-		left:540px;
+.buttons{
+		text-align: center;
 		background-color: white;
 		font-size: 20px;
 		font-family:"Impact",serif;
 		color: black;
-		border: 2px inset black;
+}
+
+.buttonContainer {
+	position:relative;
+	top: 480px;
+	left: 525px;
+	width: 280px;
+	height: 30px;
+}
+
+#hostButton {
+		position:relative;
+		width:120px;
+		height:30px;
+		float: left;
 }
 
 #backButton {
 		position:relative;
 		top:30px;
 		left:30px;
+		width:60px;
+		height:30px;
 		margin: 10px;
-		background-color: white;
-		font-size: 20px;
-		font-family:"Impact",serif;
-		color: black;
-		border: 2px inset black;
 }
 
 #rulesButton {
 		position:relative;
 		top:520px;
-		left:580px;
-		background-color: white;
-		font-size: 20px;
-		font-family:"Impact",serif;
-		color: black;
-		border: 2px inset black;
+		left:600px;
+		width:120px;
+		height:30px;
 }
 
 #joinButton {
 		position:relative;
-		top:480px;
-		left:600px;
-		background-color: white;
-		font-size: 20px;
-		font-family:"Impact",serif;
-		color: black;
-		border: 2px inset black;
+		float:right;
+		width:120px;
+		height:30px;
+}
+
+.body-text  {
+	
+	
 }
