@@ -3,12 +3,26 @@
 html {margin:0; width:100%; background-color: #504e4e;}
 p {font-family:"Impact",serif; color:white; size:16px;}
 
-.buttons{
+a:visited, a:link { 
+    color: white;
+    text-decoration: none;
+    cursor: default;
+}
+
+a:hover {
+	color: red;
+	text-decoration: none;
+	cursor: default;
+
+}
+
+
+.buttons {
 		text-align: center;
-		background-color: white;
+		background-color: #2F2725;
 		font-size: 20px;
 		font-family:"Impact",serif;
-		color: black;
+		color: white;
 }
 
 .buttonContainer {
