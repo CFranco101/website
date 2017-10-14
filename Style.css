@@ -4,9 +4,9 @@ html {margin:0; width:100%; background-color: #504e4e;}
 p {font-family:"Impact",serif; color:white; size:16px;}
 
 #hostButton {
-		position:fixed;
-		top:50%;
-		left:40%;
+		position:relative;
+		top: 480px;
+		left:540px;
 		background-color: white;
 		font-size: 20px;
 		font-family:"Impact",serif;
@@ -15,9 +15,9 @@ p {font-family:"Impact",serif; color:white; size:16px;}
 }
 
 #backButton {
-		position:fixed;
-		top:5%;
-		left:5%;
+		position:relative;
+		top:30px;
+		left:30px;
 		margin: 10px;
 		background-color: white;
 		font-size: 20px;
@@ -27,9 +27,9 @@ p {font-family:"Impact",serif; color:white; size:16px;}
 }
 
 #rulesButton {
-		position:fixed;
-		top:55%;
-		left:45%;
+		position:relative;
+		top:520px;
+		left:580px;
 		background-color: white;
 		font-size: 20px;
 		font-family:"Impact",serif;
@@ -38,9 +38,9 @@ p {font-family:"Impact",serif; color:white; size:16px;}
 }
 
 #joinButton {
-		position:fixed;
-		top:50%;
-		left:50%;
+		position:relative;
+		top:480px;
+		left:600px;
 		background-color: white;
 		font-size: 20px;
 		font-family:"Impact",serif;
