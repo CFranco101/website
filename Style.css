@@ -16,27 +16,36 @@ a:hover {
 
 }
 
+.playername {
+    position:relative;
+	top:50vh;
+    left:40vw;
+    width:250px;
+    height:35px;
+    border-style:none;
+}
 
 .buttons {
 		text-align: center;
 		background-color: #2F2725;
-		font-size: 20px;
+		font-size: 25px;
 		font-family:"Impact",serif;
 		color: white;
 }
 
 .buttonContainer {
 	position:relative;
-	top: 480px;
-	left: 525px;
-	width: 280px;
-	height: 30px;
+	top: 55vh;
+	left: 30vw;
+	width: 500px;
+	height: 35px;
+    border-style:none;
 }
 
 #hostButton {
 		position:relative;
-		width:120px;
-		height:30px;
+		width:240px;
+		height:35px;
 		float: left;
 }
 
@@ -44,27 +53,42 @@ a:hover {
 		position:relative;
 		top:30px;
 		left:30px;
-		width:60px;
-		height:30px;
+		width:240px;
+		height:35px;
 		margin: 10px;
 }
 
 #rulesButton {
 		position:relative;
-		top:520px;
-		left:600px;
-		width:120px;
-		height:30px;
+		top:60vh;
+		left:40vw;
+		width:250px;
+		height:35px;
 }
 
 #joinButton {
 		position:relative;
 		float:right;
-		width:120px;
-		height:30px;
+		width:240px;
+		height:35px;
 }
 
 .body-text  {
-	
-	
+    font-size:18px;
+    font-family: "Impact",sans-serif;
+    color:white;
+    background-color:transparent;
+}
+
+.body-rules-background{
+    background-color: whitesmoke;
+    opacity: 0.6;
+    position: absolute;
+    display: block;
+    margin-left: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 1000px;
+    height: 1000px;
+    
 }
