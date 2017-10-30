@@ -4,20 +4,32 @@
 	<head>
 		<meta charset = "utf-8">
 		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
-		<title>WereWolf Night</title>
-		<link rel = "stylesheet" type = "text/css" href = "Style.css">
+		<title>DnD</title>
+		<link rel = "stylesheet" type = "text/css" href = "Pages/Style.css">
 		<script src = "main.js"></script>
 	</head>
-
 	<body>
-       <div>
-        <input type="text" value="PlayerName" class="playername" id="userName">
+        <div class = "charsheet-container">
+            <a href ="Pages/charactersheet.html">
+                <button class = "createsheet" onclick="Pages/charactersheet.html">Create New Sheet</button>
+            </a>
+            
+            <a href ="Pages/sheetloader.html">
+                <button class = "accesssheets" onclick ="">Access Sheets</button>
+            </a>
+            <a href = "Pages/sheetviewer.html">
+                <button class = "viewsheets" onclick = "">View All Sheets</button>
+            </a>
         </div>
-	   <div class = 'buttonContainer'> 
-		  <div id = "hostButton" class = "buttons"><a href = "HostMenu.html">Host Game</a></div>
-		  <div id = "joinButton" class = "buttons"><a href = "JoinMenu.html">Join Game</a></div>
-	   </div>
-		  <div id = "rulesButton" class = "buttons"><a href = "Rules.html">How to Play</a></div>
+        <div class = "navbar">
+            <div class ="dropdown">
+                <button class = "dropBtn">Tools</button>
+                <div class = "dropdown-content">
+                    <a href ="Pages/diceRollsPage.html">Dice Rolls</a>
+                    <a href ="Pages/combatHelp.html">Combat Rules</a>
+                    <a href ="Pages/extneralLinks.html">Links</a>
+                </div>
+            </div>
+        </div>
 	</body>
-	
 </html>

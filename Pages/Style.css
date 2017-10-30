@@ -1,0 +1,246 @@
+/*CSS rules for website */
+
+html {margin:0; width:100%; background-color: #bc310f;}
+
+.navbar {
+    position: absolute;
+    top: 10vh;
+    margin-left: 10vw;
+    width: 75vw;
+    max-height: 5vh;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropBtn {
+    background-color:#f4a51d ;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #91081d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #600412;}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .dropBtn {
+    background-color: #b27813;
+    color: black;
+}
+
+/* sheet buttons on main page */
+
+.charsheet-container{
+    position: relative;
+    top: 50vh;
+    left: 30vw;
+    height: 15vh;
+    width: 50vw;
+    
+}
+
+.createsheet{
+    position: relative;
+    float: left;
+    margin: 20px;
+    height: 35px; 
+    width: 145px;
+    background-color:bisque;
+    color: darkslategray;
+    
+}
+
+.accesssheets{
+    position: relative;
+    float: left;
+    margin: 20px;
+    height: 35px; 
+    width: 145px;
+    background-color:bisque;
+    color: darkslategray;
+    
+}
+
+.viewsheets{
+    position: relative;
+    float: left;
+    margin: 20px;
+    height: 35px; 
+    width: 145px;
+    background-color:bisque;
+    color: darkslategray;
+    
+}
+
+.createsheet:hover{
+    background-color:burlywood;
+}
+
+.accesssheets:hover{
+    background-color:burlywood;
+}
+
+.viewsheets:hover{
+    background-color:burlywood;
+}
+
+/*-------------------------------------------------------------------------*/
+/*CSS rules for diceroll page */
+
+
+.rowone{
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
+}
+
+.rowtwo{
+    position: absolute;
+    top: 40vh;
+    max-width: 100%;
+}
+
+.rowthree{
+    position: absolute;
+    top: 60vh;
+    max-width: 100%;
+}
+
+/*postion for all the dice rolls */
+/*row one */ 
+
+.dfour{
+   float:left; 
+   margin: 2.5vh 5vw 2vh 5vw;
+}
+
+.dsix{
+    float:left;
+    margin: 2vw;
+    margin: 2.5vh 5vw 2vh 5vw;
+}
+
+.deight{
+    float: left;
+    margin: 2.5vh 5vw 2vh 5vw;
+}
+
+/*row two */
+
+.dten{
+    
+}
+
+.dtwelve{
+    
+}
+
+.dhunderd{
+    
+}
+
+/*row three */
+
+.dtwenty{
+    
+}
+
+
+/* Showing the Dice roll */
+
+.picfour{
+    display: block;
+    height:5vh;
+    width:5vw;
+}
+
+.picsix{
+    height:5vh;
+    width:5vw;
+}
+
+.piceight{
+    height:5vh;
+    width:5vw;
+}
+
+.picten{
+    height:5vh;
+    width:5vw;
+}
+
+.pictwelve{
+    height:5vh;
+    width:5vw;
+}
+
+.pichunderd{
+    height:5vh;
+    width:5vw;
+}
+
+.pictwenty{
+    height:5vh;
+    width:5vw;
+}
+
+/* Button for the each dice roll */
+
+.rolldfour{
+    height: 30px;
+    width: 60px;
+}
+
+.rolldsix{
+    height: 30px;
+    width: 60px;
+}
+
+.rolldeight{
+    height: 30px;
+    width: 60px;
+}
+
+.rolldten{
+    
+}
+
+.rolldtwelve{
+    
+}
+
+.rolldhunderd{
+    
+}
+
+.rolldtwenty{
+    
+}
+
+/*-------------------------------------------------------------------------*/
+/* character sheet page-editable*/
+
