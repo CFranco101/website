@@ -114,19 +114,22 @@ html {margin:0; width:100%; background-color: #bc310f;}
 
 .rowone{
     position: absolute;
-    top: 10vh;
+    top: 15vh;
+    left: 25vw;
     width: 100vw;
 }
 
 .rowtwo{
     position: absolute;
     top: 40vh;
+    left: 25vw;
     max-width: 100%;
 }
 
 .rowthree{
     position: absolute;
     top: 60vh;
+    left: 25vw;
     max-width: 100%;
 }
 
@@ -140,7 +143,6 @@ html {margin:0; width:100%; background-color: #bc310f;}
 
 .dsix{
     float:left;
-    margin: 2vw;
     margin: 2.5vh 5vw 2vh 5vw;
 }
 
@@ -152,21 +154,25 @@ html {margin:0; width:100%; background-color: #bc310f;}
 /*row two */
 
 .dten{
-    
+    float:left;
+    margin: 2.5vh 5vw 2vh 5vw;
 }
 
 .dtwelve{
-    
+    float:left;
+    margin: 2.5vh 5vw 2vh 5vw;
 }
 
 .dhunderd{
-    
+    float:left;
+    margin: 2.5vh 5vw 2vh 5vw;
 }
 
 /*row three */
 
 .dtwenty{
-    
+    float:left;
+    margin: 2.5vh 5vw 2vh 5vw;       
 }
 
 
@@ -226,19 +232,23 @@ html {margin:0; width:100%; background-color: #bc310f;}
 }
 
 .rolldten{
-    
+    height: 30px;
+    width: 60px;
 }
 
 .rolldtwelve{
-    
+    height: 30px;
+    width: 60px;
 }
 
 .rolldhunderd{
-    
+    height: 30px;
+    width: 60px;
 }
 
 .rolldtwenty{
-    
+    height: 30px;
+    width: 60px;
 }
 
 /*-------------------------------------------------------------------------*/
