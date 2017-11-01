@@ -111,144 +111,39 @@ html {margin:0; width:100%; background-color: #bc310f;}
 /*-------------------------------------------------------------------------*/
 /*CSS rules for diceroll page */
 
+#dice-table{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 80vh;
+    border-collapse: collapse;
 
-.rowone{
-    position: absolute;
-    top: 15vh;
-    left: 25vw;
-    width: 100vw;
+}
+    
 }
 
-.rowtwo{
-    position: absolute;
-    top: 40vh;
-    left: 25vw;
-    max-width: 100%;
+.dice-pic{
+    
 }
 
-.rowthree{
-    position: absolute;
-    top: 60vh;
-    left: 25vw;
-    max-width: 100%;
+.button-roll{
+    background-color: aqua;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    font-family: sans-serif;
 }
 
-/*postion for all the dice rolls */
-/*row one */ 
-
-.dfour{
-   float:left; 
-   margin: 2.5vh 5vw 2vh 5vw;
+.input-amount{
+    width: 35px;
+    margin: 5px;
 }
 
-.dsix{
-    float:left;
-    margin: 2.5vh 5vw 2vh 5vw;
+.dice-results{
+    
 }
 
-.deight{
-    float: left;
-    margin: 2.5vh 5vw 2vh 5vw;
-}
-
-/*row two */
-
-.dten{
-    float:left;
-    margin: 2.5vh 5vw 2vh 5vw;
-}
-
-.dtwelve{
-    float:left;
-    margin: 2.5vh 5vw 2vh 5vw;
-}
-
-.dhunderd{
-    float:left;
-    margin: 2.5vh 5vw 2vh 5vw;
-}
-
-/*row three */
-
-.dtwenty{
-    float:left;
-    margin: 2.5vh 5vw 2vh 5vw;       
-}
-
-
-/* Showing the Dice roll */
-
-.picfour{
-    display: block;
-    height:5vh;
-    width:5vw;
-}
-
-.picsix{
-    height:5vh;
-    width:5vw;
-}
-
-.piceight{
-    height:5vh;
-    width:5vw;
-}
-
-.picten{
-    height:5vh;
-    width:5vw;
-}
-
-.pictwelve{
-    height:5vh;
-    width:5vw;
-}
-
-.pichunderd{
-    height:5vh;
-    width:5vw;
-}
-
-.pictwenty{
-    height:5vh;
-    width:5vw;
-}
-
-/* Button for the each dice roll */
-
-.rolldfour{
-    height: 30px;
-    width: 60px;
-}
-
-.rolldsix{
-    height: 30px;
-    width: 60px;
-}
-
-.rolldeight{
-    height: 30px;
-    width: 60px;
-}
-
-.rolldten{
-    height: 30px;
-    width: 60px;
-}
-
-.rolldtwelve{
-    height: 30px;
-    width: 60px;
-}
-
-.rolldhunderd{
-    height: 30px;
-    width: 60px;
-}
-
-.rolldtwenty{
-    height: 30px;
-    width: 60px;
+.dice-total{
+    
 }
 
 /*-------------------------------------------------------------------------*/
