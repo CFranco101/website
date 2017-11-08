@@ -130,7 +130,7 @@ document.getElementById("d12button").addEventListener("click", function () {
     var allDiceRolls = document.getElementById('d12dice');
     var arrayDiceRolls = [];
     var counter = 0;
-    var total = 0
+    var total = 0;
     
     while(counter < diceAmount)
         {

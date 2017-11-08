@@ -9,6 +9,19 @@
 	</head>
 
 	<body>
+        <div class = "navbar">
+            <div class = "back">
+                <button class = "backBtn"><a href = "../index.html">Back</a></button>
+            </div>
+            <div class ="dropdown">
+                <button class = "dropBtn">Tools</button>
+                <div class = "dropdown-content">
+                    <a href ="diceRollsPage.html">Dice Rolls</a>
+                    <a href ="combatHelp.html">Quick References</a>
+                    <a href ="extneralLinks.html">Links</a>
+                </div>
+            </div>
+        </div>
        <table border = "2px soild black" id = "dice-table">
            <thead>
                <tr>
@@ -31,28 +44,28 @@
                    <td>D6</td>
                    <td><button id = "d6button" class = "button-roll">Roll</button></td>
                    <td><input type = "number" value = "1" min ="1" max="10" id = "d6amount" class = "input-amount"></td>
-                   <td><p id = "d6dice"></p></td>
+                   <td><p id = "d6dice">0</p></td>
                    <td><p id = "d6total">0</p></td>
                </tr>
                <tr>
                    <td>D8</td>
                    <td><button id = "d8button" class = "button-roll">Roll</button></td>
                    <td><input type = "number" value = "1" min ="1" max="10" id = "d8amount" class = "input-amount"></td>
-                   <td><p id = "d8dice"></p></td>
+                   <td><p id = "d8dice">0</p></td>
                    <td><p id = "d8total">0</p></td>
                </tr>
                <tr>
                    <td>D10</td>
                    <td><button id = "d10button" class = "button-roll">Roll</button></td>
                    <td><input type = "number" value = "1" min ="1" max="10" id = "d10amount" class = "input-amount"></td>
-                   <td><p id = "d10dice"></p></td>
+                   <td><p id = "d10dice">0</p></td>
                    <td><p id = "d10total">0</p></td>
                </tr>
                <tr>
                    <td>D100</td>
                    <td><button id = "d100button" class = "button-roll">Roll</button></td>
                   <td><input type = "number" value = "1" min ="1" max="10" id = "d100amount" class = "input-amount"></td>
-                   <td><p id = "d100dice"></p></td>
+                   <td><p id = "d100dice">0</p></td>
                    <td><p id = "d100total">0</p></td>
                </tr>
                <tr>
@@ -66,7 +79,7 @@
                    <td class = "dice-pic">D20</td>
                    <td><button id = "d20button" class = "button-roll">Roll</button></td>
                   <td><input type = "number" min ="1" max="10" id = "d20amount" class = "input-amount" value = "1"></td>
-                   <td><p id = "d20dice" class = "dice-results"></p></td>
+                   <td><p id = "d20dice" class = "dice-results">0</p></td>
                    <td><p id = "d20total" class = "dice-total" >0</p></td>
                </tr>
            </tbody>
