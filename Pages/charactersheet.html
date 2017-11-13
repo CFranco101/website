@@ -6,13 +6,15 @@
 		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
 		<title>Dnd Charactersheet</title>
 		<link rel = "stylesheet" type = "text/css" href ="Style.css">
-		<script src = "main.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery.min.js"></script>
+		<script src = "charactersheet.js"></script>
+        
 	</head>
 
 	<body>
         <div class = "navbar">
             <div class = "back">
-                <button class = "backBtn"><a href = "../index.html">Back</a></button>
+                <button class = "backBtn"><a href = "../index.html">Home</a></button>
             </div>
             <div class ="dropdown">
                 <button class = "dropBtn">Tools</button>
@@ -24,59 +26,85 @@
             </div>
         </div>
         <form action = "" method="post">
-            <nav id = "header" class = "module">
-                <nav class = "header-elements">
-                    <input type = "text" max = "20"><h3>Character Name</h3>
-                </nav>
-                <nav>
-                    <nav class = "header-elements">
+            <div id = "header" class = "module">
+                <div class = "header-elements">
+                    <input class = "header-inputs" type = "text" max = "20"><h3>Character Name</h3>
+                </div>
+                <div>
+                    <div class = "header-elements">
                         <input type = "text" max = "20"><h3>Class &amp; Lvl</h3><br>
                         <input type = "text" max = "20"><h3>Race</h3>
-                    </nav>
-                    <nav class = "header-elements">
+                    </div>
+                    <div class = "header-elements">
                         <input type = "text" max = "20"><h3>Background</h3><br>
                         <input type = "text" max = "20"><h3>Alignment</h3>
-                    </nav>
-                    <nav class = "header-elements">
+                    </div>
+                    <div class = "header-elements">
                         <input type = "text" max = "20"><h3>Player Name</h3><br>
                         <input type = "number"><h3>Experince Points</h3>
-                    </nav>
-                </nav>
-            </nav>
+                    </div>
+                </div>
+            </div>
            
-            <nav id = "abilites" class = "module">
-                <nav class = "ability-scores">
-                    <p class = "ability-text">0</p><br>
-                    <input type = "number" min = "1" max = "30">
-                    <p  class = "ability-text">Strength</p>
-                </nav>
-                <nav class = "ability-scores">
-                    <p class = "ability-text">0</p><br>
-                    <input type = "number" min = "1" max = "30">
+            <div id = "abilites" class = "module">
+                <div class = "ability-scores">
+                    <p class = "ability-text" id="strength-text">0</p>
+                    <input id = "strength-number" oninput = "updateStrength()" class = "ability-input" type = "number" min = "1" max = "30" value = "0">
+                    <p class = "ability-text">Strength</p>
+                </div>
+                <div class = "ability-scores">
+                    <p class = "ability-text" id ="dexterity-text">0</p>
+                    <input id = "dexterity-number" oninput = "updateDexterity()" class = "ability-input" type = "number" min = "1" max = "30" value = "0">
                     <p  class = "ability-text">Dexterity</p>
-                </nav>
-                <nav class = "ability-scores">
-                    <p class = "ability-text">0</p><br>
-                    <input type = "number" min = "1" max = "30">
+                </div>
+                <div class = "ability-scores">
+                    <p class = "ability-text" id ="constitution-text">0</p>
+                    <input id = "constitution-number" class = "ability-input" oninput = "updateConstitution()" type = "number" min = "1" max = "30" value = "0">
                     <p  class = "ability-text">Constitution</p>
-                </nav>
-                <nav class = "ability-scores">
-                    <p class = "ability-text">0</p><br>
-                    <input type = "number" min = "1" max = "30">
+                </div>
+                <div class = "ability-scores">
+                    <p class = "ability-text" id ="intelligence-text">0</p>
+                    <input id = "intelligence-number" class = "ability-input" oninput = "updateIntelligence()" type = "number" min = "1" max = "30" value = "0">
                     <p  class = "ability-text">Intelligence</p>
-                </nav>
-                <nav class = "ability-scores">
-                    <p class = "ability-text">0</p><br>
-                    <input type = "number" min = "1" max = "30">
+                </div>
+                <div class = "ability-scores">
+                    <p class = "ability-text" id ="wisdom-text">0</p>
+                    <input id = "wisdom-number" class = "ability-input" oninput = "updateWisdom()" type = "number" min = "1" max = "30" value = "0">
                     <p  class = "ability-text">Wisdom</p>
-                </nav>
-                <nav class = "ability-scores">
-                    <p class = "ability-text">0</p><br>
-                    <input type = "number" min = "1" max = "30">
+                </div>
+                <div class = "ability-scores">
+                    <p class = "ability-text" id ="charisma-text">0</p>
+                    <input id = "charisma-number" class = "ability-input" oninput = "updateCharisma()" type = "number" min = "1" max = "30" value = "0">
                     <p  class = "ability-text">Charisma</p>
-                </nav>
-            </nav>    
+                </div>
+            </div>
             
+            <div id = "skills" class = "module">
+                <div class = "skills-mod">
+                    <input id = "bonus-num"type ="number" value = "0">
+                    <h6>Proficency Bonus</h6>
+                </div> 
+                
+                <div id = "skills-saving">
+                    <div class="savethrow-div"><input id = "saving-boxS" type = "checkbox" onchange= "savingStrength()"><h5 id ="saving-strength">0</h5><h6>Strength</h6></div>
+                    <div class="savethrow-div"><input id = "saving-boxD" type = "checkbox" onchange = "savingDexterity()"><h5 id ="saving-dexterity">0</h5><h6>Dexterity</h6></div>
+                    <div class="savethrow-div"><input id = "saving-boxC" type = "checkbox" onchange="savingConstitution()"><h5 id ="saving-constitution">0</h5><h6>Constitution</h6></div>
+                    <div class="savethrow-div"><input id = "saving-boxI" type = "checkbox" onchange="savingIntelligence()"><h5 id ="saving-intelligence">0</h5><h6>Intelligence</h6></div>
+                    <div class="savethrow-div"><input id = "saving-boxW" type = "checkbox" onchange="savingWisdom()"><h5 id ="saving-wisdom">0</h5><h6>Wisdom</h6></div>
+                    <div class="savethrow-div"><input id = "saving-boxC" type = "checkbox" onchange ="savingCharisma()"><h5 id ="saving-charisma">0</h5><h6>Charisma</h6></div>
+                </div>
+                
+                <div>
+                    <div>
+                    </div>
+                    
+                    <div>
+                    </div>
+                    
+                    <div>
+                    </div>
+                </div>
+            </div>
         </form>
 	</body>
 </html>
