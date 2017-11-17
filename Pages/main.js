@@ -166,7 +166,3 @@
         allDiceRolls.innerHTML = arrayDiceRolls;
         endTotal.innerHTML = total;
     });
-
-
-
-

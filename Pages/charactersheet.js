@@ -1,97 +1,120 @@
-
 function updateStrength() {
-        var strength = document.getElementById("strength-number").value;
-        if (document.getElementById('saving-boxS').checked == true)
-            {
-               document.getElementById('saving-strength').innerHTML = parseInt(giveModifer(strength)) + parseInt(addProfiecent(strength));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-strength').innerHTML = giveModifer(strength);
-            }
-    
-        document.getElementById('strength-text').innerHTML = giveModifer(strength);
-        
+    update("strength-number","saving-boxS","saving-strength","strength-text");
+    skillAth();
     }
 
 function updateDexterity() {
-        var dexterity = document.getElementById("dexterity-number").value;
-        if (document.getElementById('saving-boxD').checked == true)
-            {
-               document.getElementById('saving-dexterity').innerHTML = parseInt(giveModifer(dexterity)) + parseInt(addProfiecent(dexterity));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-dexterity').innerHTML = giveModifer(dexterity);
-            }
-    
-        document.getElementById('dexterity-text').innerHTML = giveModifer(dexterity);
+    update("dexterity-number","saving-boxD","saving-dexterity","dexterity-text");
+    skillAcr();
+    skillSle();
+    skillSte();
     }
 
 function updateConstitution() {
-        var constitution = document.getElementById("constitution-number").value;
-        if (document.getElementById('saving-boxC').checked == true)
-            {
-               document.getElementById('saving-constitution').innerHTML = parseInt(giveModifer(constitution)) + parseInt(addProfiecent(constitution));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-constitution').innerHTML = giveModifer(constitution);
-            }
-    
-        document.getElementById('constitution-text').innerHTML = giveModifer(constitution);
+    update("constitution-number","saving-boxC","saving-constitution","constitution-text");
     }
 
 function updateIntelligence() {
-        var intelligence = document.getElementById("intelligence-number").value;
-        if (document.getElementById('saving-boxI').checked == true)
-            {
-               document.getElementById('saving-intelligence').innerHTML = parseInt(giveModifer(intelligence)) + parseInt(addProfiecent(intelligence));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-intelligence').innerHTML = giveModifer(intelligence);
-            }
-    
-        document.getElementById('intelligence-text').innerHTML = giveModifer(intelligence);
-        
+    update("intelligence-number","saving-boxI","saving-intelligence","intelligence-text");
+    skillArc();
+    skillHis();
+    skillInv();
+    skillNat();
+    skillRel();
     }
 
 function updateWisdom() {
-        var wisdom = document.getElementById("wisdom-number").value;
-        if (document.getElementById('saving-boxW').checked == true)
-            {
-               document.getElementById('saving-wisdom').innerHTML = parseInt(giveModifer(wisdom)) + parseInt(addProfiecent(wisdom));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-wisdom').innerHTML = giveModifer(wisdom);
-            }
-    
-        document.getElementById('wisdom-text').innerHTML = giveModifer(wisdom);
+    update("wisdom-number","saving-boxW","saving-wisdom","wisdom-text");
+    skillAni();
+    skillIns();
+    skillMed();
+    skillPer();
+    skillSur();
     }
 
 function updateCharisma() {
-        var charisma = document.getElementById("charisma-number").value;
-        if (document.getElementById('saving-boxC').checked == true)
-            {
-               document.getElementById('saving-charisma').innerHTML = parseInt(giveModifer(charisma)) + parseInt(addProfiecent(charisma));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-charisma').innerHTML = giveModifer(charisma);
-            }
-    
-        document.getElementById('charisma-text').innerHTML = giveModifer(charisma);  
+    update("charisma-number","saving-boxCH","saving-charisma","charisma-text"); 
+    skillDec();
+    skillInt();
+    skillPerf();
+    skillPers();
     }
 
+function skillAcr() {
+    update ("dexterity-number","skill-acr","skillsnum-acr","dexterity-text");
+}
+
+function skillAni() {
+    update ("wisdom-number","skill-ani","skillsnum-ani","wisdom-text");
+}
+
+function skillArc() {
+    update ("intelligence-number","skill-arc","skillsnum-arc","intelligence-text");
+}
+
+function skillAth() {
+    update ("strength-number","skill-ath","skillsnum-ath","strength-text");
+}
+
+function skillDec() {
+    update ("charisma-number","skill-dec","skillsnum-dec","charisma-text");
+}
+
+function skillHis() {
+    update ("intelligence-number","skill-his","skillsnum-his","intelligence-text");
+}
+
+function skillIns() {
+    update ("wisdom-number","skill-ins","skillsnum-ins","wisdom-text");
+}
+
+function skillInt() {
+    update ("charisma-number","skill-int","skillsnum-int","charisma-text");
+}
+
+function skillInv() {
+    update ("intelligence-number","skill-inv","skillsnum-inv","intelligence-text");
+}
+
+function skillMed() {
+    update ("wisdom-number","skill-med","skillsnum-med","wisdom-text");
+}
+
+function skillNat() {
+    update ("intelligence-number","skill-nat","skillsnum-nat","intelligence-text");
+}
+
+function skillPer() {
+    update ("wisdom-number","skill-per","skillsnum-per","wisdom-text");
+}
+
+function skillPerf() {
+    update ("charisma-number","skill-perf","skillsnum-perf","charisma-text");
+}
+
+function skillPers() {
+    update ("charisma-number","skill-pers","skillsnum-pers","charisma-text");
+}
+
+function skillRel() {
+    update ("intelligence-number","skill-rel","skillsnum-rel","intelligence-text");
+}
+
+function skillSle() {
+    update ("dexterity-number","skill-sle","skillsnum-sle","dexterity-text");
+}
+
+function skillSte() {
+    update ("dexterity-number","skill-ste","skillsnum-ste","dexterity-text");
+}
+
+function skillSur() {
+    update ("wisdom-number","skill-sur","skillsnum-sur","wisdom-text");
+}
+
 function giveModifer(val) {
+    if (val <= 0|| val >= 31)
+            return 0;
     if (val == 1) {
             return -5;
             }
@@ -146,72 +169,16 @@ function addProfiecent() {
     return document.getElementById('bonus-num').value;
 }
 
-function savingStrength() {
-    var strength = document.getElementById("strength-number").value;
-    if (document.getElementById('saving-boxS').checked == true) {
-        document.getElementById('saving-strength').innerHTML = parseInt(giveModifer(strength)) + parseInt(addProfiecent(strength));
-    }
-    else {
-        document.getElementById('saving-strength').innerHTML = giveModifer(strength);
-    }
+function update(abilityNum,box,skill,main) {
+    var ability = document.getElementById(abilityNum).value;
+    if (document.getElementById(box).checked == true)
+        {
+            document.getElementById(skill).innerHTML = parseInt(giveModifer(ability)) + parseInt(addProfiecent(ability));
+         }
+    else 
+        {
+            document.getElementById(skill).innerHTML = giveModifer(ability);
+        }
     
-}
-
-function savingDexterity() {
-    var dexterity = document.getElementById("dexterity-number").value;
-    if (document.getElementById('saving-boxD').checked == true) {
-        document.getElementById('saving-dexterity').innerHTML = parseInt(giveModifer(dexterity)) + parseInt(addProfiecent(dexterity));
-    }
-    else {
-        document.getElementById('saving-strength').innerHTML = giveModifer(dexterity);
-    }
-}
-
-function savingConstitution() {
-    var constitution = document.getElementById("constitution-number").value;
-    if (document.getElementById('saving-boxC').checked == true) {
-        document.getElementById('saving-constitution').innerHTML = parseInt(giveModifer(constitution)) + parseInt(addProfiecent(constitution));
-    }
-    else {
-        document.getElementById('saving-constitution').innerHTML = giveModifer(constitution);
-    }
-}
-
-function savingIntelligence() {
-    var intelligence = document.getElementById("intelligence-number").value;
-        if (document.getElementById('saving-boxI').checked == true)
-            {
-               document.getElementById('saving-intelligence').innerHTML = parseInt(giveModifer(intelligence)) + parseInt(addProfiecent(intelligence));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-intelligence').innerHTML = giveModifer(intelligence);
-            }
-}
-
-function savingWisdom() {
-   var wisdom = document.getElementById("wisdom-number").value;
-        if (document.getElementById('saving-boxW').checked == true)
-            {
-               document.getElementById('saving-wisdom').innerHTML = parseInt(giveModifer(wisdom)) + parseInt(addProfiecent(wisdom));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-wisdom').innerHTML = giveModifer(wisdom);
-            }
-}
-
-function savingCharisma() {
-    var charisma = document.getElementById("charisma-number").value;
-        if (document.getElementById('saving-boxC').checked == true)
-            {
-               document.getElementById('saving-charisma').innerHTML = parseInt(giveModifer(charisma)) + parseInt(addProfiecent(charisma));
-                
-            }
-        else 
-            {
-            document.getElementById('saving-charisma').innerHTML = giveModifer(charisma);
-            }
+        document.getElementById(main).innerHTML = giveModifer(ability);
 }

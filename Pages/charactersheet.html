@@ -80,29 +80,65 @@
             </div>
             
             <div id = "skills" class = "module">
-                <div class = "skills-mod">
-                    <input id = "bonus-num"type ="number" value = "0">
+                <div class = "skills-stuff">
+                    <input id = "bonus-num" class ="ability-input"type ="number" value = "0">
                     <h6>Proficency Bonus</h6>
                 </div> 
                 
-                <div id = "skills-saving">
-                    <div class="savethrow-div"><input id = "saving-boxS" type = "checkbox" onchange= "savingStrength()"><h5 id ="saving-strength">0</h5><h6>Strength</h6></div>
-                    <div class="savethrow-div"><input id = "saving-boxD" type = "checkbox" onchange = "savingDexterity()"><h5 id ="saving-dexterity">0</h5><h6>Dexterity</h6></div>
-                    <div class="savethrow-div"><input id = "saving-boxC" type = "checkbox" onchange="savingConstitution()"><h5 id ="saving-constitution">0</h5><h6>Constitution</h6></div>
-                    <div class="savethrow-div"><input id = "saving-boxI" type = "checkbox" onchange="savingIntelligence()"><h5 id ="saving-intelligence">0</h5><h6>Intelligence</h6></div>
-                    <div class="savethrow-div"><input id = "saving-boxW" type = "checkbox" onchange="savingWisdom()"><h5 id ="saving-wisdom">0</h5><h6>Wisdom</h6></div>
-                    <div class="savethrow-div"><input id = "saving-boxC" type = "checkbox" onchange ="savingCharisma()"><h5 id ="saving-charisma">0</h5><h6>Charisma</h6></div>
+                <div class = "skills-stuff">
+                    <table>
+                        <tbody>
+                            <tr><td><input class="saving-parts"id = "saving-boxS" type = "checkbox" onchange= "updateStrength()"><h5 class="saving-parts" id ="saving-strength">0</h5><h6 class="saving-parts">Strength</h6></td></tr>
+                            
+                            <tr><td><input class="saving-parts" id = "saving-boxD" type = "checkbox" onchange = "updateDexterity()"><h5 class="saving-parts" id ="saving-dexterity">0</h5><h6 class="saving-parts">Dexterity</h6></td></tr>
+                            
+                            <tr><td><input class="saving-parts" id = "saving-boxC" type = "checkbox" onchange="updateConstitution()"><h5 class="saving-parts" id ="saving-constitution">0</h5><h6 class="saving-parts">Constitution</h6></td></tr>
+                            
+                            <tr><td><input class="saving-parts" id = "saving-boxI" type = "checkbox" onchange="updateIntelligence()"><h5 class="saving-parts" id ="saving-intelligence">0</h5><h6 class="saving-parts">Intelligence</h6></td></tr>
+                            
+                            <tr><td><input class="saving-parts" id = "saving-boxW" type = "checkbox" onchange="updateWisdom()"><h5 class="saving-parts" id ="saving-wisdom">0</h5><h6 class="saving-parts">Wisdom</h6></td></tr>
+                            
+                            <tr><td><input class="saving-parts" id = "saving-boxCH" type = "checkbox" onchange="updateCharisma()"><h5 class="saving-parts" id ="saving-charisma">0</h5><h6 class="saving-parts">Charisma</h6></td></tr>
+                        </tbody>
+                    </table>
                 </div>
-                
-                <div>
-                    <div>
-                    </div>
+                <div class = "skills-stuff">
+                    <table>
+                        <tbody>
+                            <tr><td><input type = "checkbox" id="skill-acr"class="saving-parts" onchange="skillAcr()"><h5 id ="skillsnum-acr"class="saving-parts">0</h5><h6 class="saving-parts">Acrobatics</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-ani" class="saving-parts" onchange="skillAni()"><h5 id ="skillsnum-ani" class="saving-parts">0</h5><h6 class="saving-parts">Animal Handling</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-arc" class="saving-parts" onchange="skillArc()"><h5 id ="skillsnum-arc" class="saving-parts">0</h5><h6 class="saving-parts">Arcana</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-ath" class="saving-parts" onchange="skillAth()"><h5 id ="skillsnum-ath" class="saving-parts">0</h5><h6 class="saving-parts">Athletics</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-dec" class="saving-parts" onchange="skillDec()"><h5 id ="skillsnum-dec" class="saving-parts">0</h5><h6 class="saving-parts">Deception</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-his" class="saving-parts" onchange="skillHis()"><h5 id ="skillsnum-his" class="saving-parts">0</h5><h6 class="saving-parts">History</h6></td></tr>
+                        </tbody>
+                    </table>
+                </div>
                     
-                    <div>
-                    </div>
+                <div class = "skills-stuff">
+                    <table>
+                        <tbody>
+                            <tr><td><input type = "checkbox" id="skill-ins" class="saving-parts" onchange="skillIns()"><h5 id ="skillsnum-ins" class="saving-parts">0</h5><h6 class="saving-parts">Insight</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-int" class="saving-parts" onchange="skillInt()"><h5 id ="skillsnum-int" class="saving-parts">0</h5><h6 class="saving-parts">Intimidation</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-inv" class="saving-parts" onchange="skillInv()"><h5 id ="skillsnum-inv" class="saving-parts">0</h5><h6 class="saving-parts">Investigation</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-med" class="saving-parts" onchange="skillMed()"><h5 id ="skillsnum-med" class="saving-parts">0</h5><h6 class="saving-parts">Medicine</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-nat" class="saving-parts" onchange="skillNat()"><h5 id ="skillsnum-nat" class="saving-parts">0</h5><h6 class="saving-parts">Nature</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-per" class="saving-parts" onchange="skillPer()"><h5 id ="skillsnum-per" class="saving-parts">0</h5><h6 class="saving-parts">Perception</h6></td></tr>
+                        </tbody>
+                    </table>
+                </div>
                     
-                    <div>
-                    </div>
+                <div class = "skills-stuff">
+                    <table>
+                        <tbody>
+                            <tr><td><input type = "checkbox" id="skill-perf" class="saving-parts" onchange="skillPerf()"><h5 id ="skillsnum-perf" class="saving-parts">0</h5><h6 class="saving-parts">Performance</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-pers"  class="saving-parts" onchange="skillPers()"><h5 id ="skillsnum-pers" class="saving-parts">0</h5><h6 class="saving-parts">Persuasion</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-rel" class="saving-parts" onchange="skillRel()"><h5 id ="skillsnum-rel" class="saving-parts">0</h5><h6 class="saving-parts">Religion</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-sle" class="saving-parts" onchange="skillSle()"><h5 id ="skillsnum-sle" class="saving-parts">0</h5><h6 class="saving-parts">Sleight of Hand</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-ste" class="saving-parts" onchange="skillSte()"><h5 id ="skillsnum-ste" class="saving-parts">0</h5><h6 class="saving-parts">Stealth</h6></td></tr>
+                            <tr><td><input type = "checkbox" id="skill-sur" class="saving-parts" onchange="skillSur()"><h5 id ="skillsnum-sur" class="saving-parts">0</h5><h6 class="saving-parts">Survival</h6></td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </form>
