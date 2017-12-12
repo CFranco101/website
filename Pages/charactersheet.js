@@ -161,7 +161,7 @@ function giveModifer(val) {
                 return "+" + 9;
             }
         else if (val ==30) {
-                return 10;
+                return "+" + 10;
             }
 }
 
@@ -181,4 +181,14 @@ function update(abilityNum,box,skill,main) {
         }
     
         document.getElementById(main).innerHTML = giveModifer(ability);
+}
+
+function prof() {
+    updateWisdom();
+    updateCharisma();
+    updateConstitution();
+    updateDexterity();
+    updateIntelligence();
+    updateWisdom();
+    
 }

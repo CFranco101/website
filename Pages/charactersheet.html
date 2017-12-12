@@ -8,7 +8,7 @@
 		<link rel = "stylesheet" type = "text/css" href ="Style.css">
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery.min.js"></script>
 		<script src = "charactersheet.js"></script>
-        
+        <script src="https://widget.battleforthenet.com/widget.js" async></script> 
 	</head>
 
 	<body>
@@ -20,12 +20,12 @@
                 <button class = "dropBtn">Tools</button>
                 <div class = "dropdown-content">
                     <a href ="diceRollsPage.html">Dice Rolls</a>
-                    <a href ="combatHelp.html">Quick References</a>
+                    <a href = "tracker.html">Initiative Tracker</a>
                     <a href ="extneralLinks.html">Links</a>
                 </div>
             </div>
         </div>
-        <form action = "" method="post">
+        <form action = "server.php" method="post">
             <div id = "header" class = "module">
                 <div class = "header-elements">
                     <input class = "header-inputs" type = "text" max = "20"><h3>Character Name</h3>
@@ -81,7 +81,7 @@
             
             <div id = "skills" class = "module">
                 <div class = "skills-stuff">
-                    <input id = "bonus-num" class ="ability-input"type ="number" value = "0">
+                    <input id = "bonus-num" class ="ability-input"type ="number" value = "0" onchange="">
                     <h6>Proficency Bonus</h6>
                 </div> 
                 
@@ -141,6 +141,57 @@
                     </table>
                 </div>
             </div>
+            <div id = "skills" class = "module">
+                <div class = "skills-stats">
+                    <input type="number" class = "skills-input-stats" max="30"><h6  class = "skills-input-stats">Armor Class</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <input type="number" class = "skills-input-stats" max="30"><h6  class = "skills-input-stats">Initiative</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <input type="number" class = "skills-input-stats" max="100"><h6  class = "skills-input-stats">Speed</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <input type="number" class = "skills-input-stats" max ="600"><h6  class = "skills-input-stats">Current Hit Points</h6>
+                </div>
+                
+                <div class = "skills-stats" max ="600">
+                    <input type="number" class = "skills-input-stats"><h6  class = "skills-input-stats">Temporary Hitpoints</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <textarea rows = "3" cols="25" class = "skills-input-text"></textarea><h6 class = "skills-input-text">Personailty Trait</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <textarea rows = "3" cols="25" class = "skills-input-text"></textarea><h6 class = "skills-input-text">Ideals</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <textarea rows = "3" cols="25" class = "skills-input-text"></textarea><h6 class = "skills-input-text">Bonds</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <textarea rows = "3" cols="25" class = "skills-input-text"></textarea><h6 class = "skills-input-text">Flaws</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <textarea rows = "5" cols="30" class = "skills-input-text"></textarea><h6 class = "skills-input-text">Other Proficeienceies and Languages</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <textarea rows = "7" cols="25" class = "skills-input-text"></textarea><h6 class = "skills-input-text">Equipment</h6>
+                </div>
+                
+                <div class = "skills-stats">
+                    <textarea rows = "14" cols="30" class = "skills-input-text"></textarea><h6 class = "skills-input-text">Features and Traits</h6>
+                </div>
+            </div>
+            
+            <input type="submit" class="submit-btn">
         </form>
 	</body>
 </html>

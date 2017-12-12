@@ -214,7 +214,7 @@ html {margin:0; width:100%; background-color: #bc310f;}
 
 .ability-input{
     margin-left: 45px;
-    width: 35px;
+    width: 40px;
 }
 
 .skills-mod {
@@ -234,4 +234,42 @@ html {margin:0; width:100%; background-color: #bc310f;}
     margin-top: 2px;
     margin-left: 2px;
     margin-bottom: 2px;
+}
+
+.skills-stats {
+    float:left;
+}
+
+.skills-input-stats {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.skills-input-text {
+    margin-left: 20px;
+}
+
+.submit-btn {
+    float:left;
+    margin-left: 10%; 
+    margin-bottom: 2.5%;
+    width: 100px;
+    height: 45px;
+    
+}
+/* ----------------------------------------------------------- */
+/* Int tracker page CSS rules */
+
+#tracker {
+    position: absolute;
+    top: 15vh;
+    left: 25vw;
+    max-width: 50vw;
+}
+
+#tracker-parts {
+    position: absolute;
+    top: 35vh;
+    left: 25vw;
+    max-width: 50vw;
 }
