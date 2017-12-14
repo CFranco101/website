@@ -1,4 +1,3 @@
-
     document.getElementById("d20button").addEventListener("click", function () {
         var diceAmount = document.getElementById('d20amount').value;
         var endTotal = document.getElementById('d20total');
