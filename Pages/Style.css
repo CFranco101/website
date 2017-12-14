@@ -273,3 +273,14 @@ html {margin:0; width:100%; background-color: #bc310f;}
     left: 25vw;
     max-width: 50vw;
 }
+
+
+/*-------------------------------------------------------------------------*/
+/*Rules for links pages. */
+
+.link-tabs {
+    position: absolute;
+    top: 15vh;
+    left: 15vw;
+    
+}
