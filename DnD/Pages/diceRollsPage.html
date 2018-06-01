@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+		<title>Dice Rolls</title>
+		<link rel = "stylesheet" type = "text/css" href = "Style.css">
+
+	</head>
+
+	<body>
+        <div class = "navbar">
+            <div class = "back">
+                <button class = "backBtn"><a href = "../index.html">Home</a></button>
+            </div>
+            <div class ="dropdown">
+                <button class = "dropBtn">Tools</button>
+                <div class = "dropdown-content">
+                    <a href ="diceRollsPage.html">Dice Rolls</a>
+                    <a href = "tracker.html">Initiative Tracker</a>
+                    <a href ="extneralLinks.html">Links</a>
+                </div>
+            </div>
+        </div>
+       <table border = "2px soild black" id = "dice-table">
+           <thead>
+               <tr>
+                   <td>Die</td>
+                   <td>---</td>
+                   <td># of Dice</td>
+                   <td>Modifer</td>
+                   <td>Amount</td>
+                   <td>Total</td>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>D4</td>
+                   <td><button id  = "d4button" class = "button-roll">Roll</button></td>
+                   <td><input type = "number" value = "1" min ="1" max="10" id = "d4amount" class = "input-amount"></td>
+                   <td><input type = "number" min = "-20" max = "30" id = "d4modifer" class = "" value = "0"></td>
+                   <td><p id = "d4dice">0</p></td>
+                   <td><p id = "d4total">0</p></td>
+               </tr>
+               <tr>
+                   <td>D6</td>
+                   <td><button id = "d6button" class = "button-roll">Roll</button></td>
+                   <td><input type = "number" value = "1" min ="1" max="10" id = "d6amount" class = "input-amount"></td>
+                   <td><input type = "number" min = "-20" max = "30" id = "d6modifer" class = "" value = "0"></td>
+                   <td><p id = "d6dice">0</p></td>
+                   <td><p id = "d6total">0</p></td>
+               </tr>
+               <tr>
+                   <td>D8</td>
+                   <td><button id = "d8button" class = "button-roll">Roll</button></td>
+                   <td><input type = "number" value = "1" min ="1" max="10" id = "d8amount" class = "input-amount"></td>
+                   <td><input type = "number" min = "-20" max = "30" id = "d8modifer" class = "" value = "0"></td>
+                   <td><p id = "d8dice">0</p></td>
+                   <td><p id = "d8total">0</p></td>
+               </tr>
+               <tr>
+                   <td>D10</td>
+                   <td><button id = "d10button" class = "button-roll">Roll</button></td>
+                   <td><input type = "number" value = "1" min ="1" max="10" id = "d10amount" class = "input-amount"></td>
+                   <td><input type = "number" min = "-20" max = "30" id = "d10modifer" class = "" value = "0"></td>
+                   <td><p id = "d10dice">0</p></td>
+                   <td><p id = "d10total">0</p></td>
+               </tr>
+               <tr>
+                   <td>D100</td>
+                   <td><button id = "d100button" class = "button-roll">Roll</button></td>
+                  <td><input type = "number" value = "1" min ="1" max="10" id = "d100amount" class = "input-amount"></td>
+                   <td><input type = "number" min = "-20" max = "30" id = "d100modifer" class = "" value = "0"></td>
+                   <td><p id = "d100dice">0</p></td>
+                   <td><p id = "d100total">0</p></td>
+               </tr>
+               <tr>
+                   <td>D12</td>
+                   <td><button id = "d12button" class = "button-roll">Roll</button></td>
+                   <td><input type = "number" value = "1" min ="1" max="10" id = "d12amount" class = "input-amount"></td>
+                   <td><input type = "number" min = "-20" max = "30" id = "d12modifer" class = "" value = "0"></td>
+                   <td><p id = "d12dice">0</p></td>
+                   <td><p id = "d12total">0</p></td>
+               </tr>
+               <tr>
+                   <td class = "dice-pic">D20</td>
+                   <td><button id = "d20button" class = "button-roll">Roll</button></td>
+                  <td><input type = "number" min ="1" max="10" id = "d20amount" class = "input-amount" value = "1"></td>
+                   <td><input type = "number" min = "-20" max = "30" id = "d20modifer" class = "" value = "0"></td>
+                   <td><p id = "d20dice" class = "dice-results">0</p></td>
+                   <td><p id = "d20total" class = "dice-total" >0</p></td>
+               </tr>
+           </tbody>
+        </table>
+    </body>
+    <script src = "main.js"></script>
+</html>

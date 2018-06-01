@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Battle</title>
+    <link rel = "stylesheet" type = "text/css" href = "gameStyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="gameMain.js"></script>
+</head>
+<body>
+    <div id="pickClass">
+        <div class="layout-class">
+            <img src="images/wizard.png" height="200" width="150" alt="Cartoon Wizard">
+            <input type="radio" id="class-wizard" name="class">
+            <label for="class-wizard">Wizard</label>
+            <p>High Chance for damage but high chance to miss as well</p>
+        </div>
+        <div class="layout-class">
+            <img src="images/knight.png" height="200" width="150" alt="Cartoon Knight">
+            <input type="radio" id="class-knight" name="class">
+            <label for="class-knight">Knight</label>
+            <p>Average at damage and defense</p>
+        </div>
+        <div class="layout-class">
+            <img src="images/rogue.png" height="200" width="150" alt="Cartoon Knight">
+            <input type="radio" id="class-rogue" name="class">
+            <label for="class-rogue">Rogue</label>
+            <p>Has a set of skills to always gain the upper hand</p>
+        </div>
+        <input id="class-picked" type="submit" onclick="" value="submit">
+
+    </div>
+
+    <div id="battle">
+        <div id="battle-info">
+            <h1 id="battle-info-main"></h1>
+            <h4 id="battle-info-status"></h4>
+        </div>
+        <div id="battle-map">
+            <div id="battle-image-player" class="battle-image">
+                <h3 id="battle-image-player-health"></h3>
+                <img id="battle-image-player-img" src="" height="200" width="150">
+            </div>
+            <div id="battle-image-enemy" class="battle-image">
+                <h3 id="battle-image-enemy-health"></h3>
+                <img id="battle-image-enemy-img" src="" height="200" width="150">
+            </div>
+        </div>
+        <div id="battle-class-skills">
+            <table>
+                <tr>
+                    <th>Ability</th>
+                    <th>Info</th>
+                    <th>Chance</th>
+                    <th>Values</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td id="battle-class-basicAttack-name"></td>
+                    <td id="battle-class-basicAttack-info"></td>
+                    <td id="battle-class-basicAttack-chance"></td>
+                    <td id="battle-class-basicAttack-values"></td>
+                    <td id="option-basicAttack"><input type="radio" id="battle-class-basicAttack" name="choice">
+                        <label for="battle-class-basicAttack"></label></td>
+                </tr>
+                <tr>
+                    <td id="battle-class-specialAttack-name"></td>
+                    <td id="battle-class-specialAttack-info"></td>
+                    <td id="battle-class-specialAttack-chance"></td>
+                    <td id="battle-class-specialAttack-values"></td>
+                    <td id="option-specialAttack"><input type="radio" id="battle-class-specialAttack" name="choice">
+                        <label for="battle-class-specialAttack"></label></td>
+                </tr>
+                <tr>
+                    <td id="battle-class-special-name"></td>
+                    <td id="battle-class-special-info"></td>
+                    <td id="battle-class-special-chance"></td>
+                    <td id="battle-class-special-values"></td>
+                    <td id="option-SpecialOne"><input type="radio" id="battle-class-specialOne" name="choice">
+                        <label for="battle-class-specialOne"></label></td>
+                </tr>
+                <tr>
+                    <td id="battle-class-special2-name"></td>
+                    <td id="battle-class-special2-info"></td>
+                    <td id="battle-class-special2-chance"></td>
+                    <td id="battle-class-special2-values"></td>
+                    <td id="option-SpecialTwo"><input type="radio" id="battle-class-specialTwo" name="choice">
+                        <label for="battle-class-specialTwo"></label></td>
+                </tr>
+            </table>
+            <input type="submit" id="battle-class-fight" value="Fight!">
+        </div>
+    </div>
+
+    <div id="levelUp">
+            <h1>YOU WON THE FIGHT!</h1>
+            <h2>Level Up!</h2>
+
+            <input type="radio" id="levelUp1" name="class-levelUp">
+            <label for="levelUp1"></label>
+            <h6 id="levelUp-option1"></h6>
+            <input type="radio" id="levelUp2" name="class-levelUp">
+            <label for="levelUp2"></label>
+            <h6 id="levelUp-option2"></h6>
+            <input type="radio" id="levelUp3" name="class-levelUp">
+            <label for="levelUp3"></label>
+            <h6 id="levelUp-option3"></h6>
+
+            <input type="submit" value="I'm Ready!" id="levelUp-submit">
+    </div>
+
+    <div id="map">
+        <h1 id="map-info"></h1>
+        <h3 id="map-info-details"></h3>
+
+        <input type="submit" id="map-battleGo" value="Go!">
+
+    </div>
+
+    <div id="gameOver">
+        <h1>Game Over</h1>
+        <h3>Refresh Page to Restart from beginning</h3>
+    </div>
+
+    <div id="winner">
+        <h1>YOU SLAY THE DRAGON AND WON!</h1>
+        <h2>Congrats</h2>
+    </div>
+</body>
+</html>
