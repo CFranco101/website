@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <title>Home Page</title>
+</head>
+<body>
+    <ul id="main-nav-bar">
+        <li class="main-nav-bar-listItem"><a class="main-nav-bar-ancItem" onclick="jumpTo(0)">Home</a></li>
+        <li class="main-nav-bar-listItem"><a class="main-nav-bar-ancItem" onclick="jumpTo(600)">About Me</a></li>
+        <li class="main-nav-bar-listItem"><a class="main-nav-bar-ancItem" onclick="jumpTo(1200)">School Work</a></li>
+        <li class="main-nav-bar-listItem"><a class="main-nav-bar-ancItem" onclick="jumpTo(1800)">Info</a></li>
+    </ul>
+    <div id="home-main">
+        <h1>Christian M Franco</h1>
+        <p>I am an aspiring computer programmer and computer scientist. Ready to Learn</p>
+    </div>
+    <div id="aboutMe-main">
+        <h1>About Me</h1>
+        <p class=""></p>
+    </div>
+    <div id="schoolWork-main">
+        <div>
+            <a href="DnD/index.html" class="schoolWork-dropDown">Dungeon & Dragons</a>
+            <div class="schoolWork-dropDown-content">
+                <p class="schoolWork-dropDown-info"></p>
+            </div>
+        </div>
+        <div>
+            <a href="Game/gameMain.html">Javascript Game Project</a>
+        </div>
+    </div>
+    <div id="info-main">
+
+    </div>
+</body>
+</html>
