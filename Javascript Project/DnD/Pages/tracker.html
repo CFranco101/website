@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1"/>
+		<title>Intivative Tracker</title>
+		<link rel = "stylesheet" type = "text/css" href = "Style.css">
+	</head>
+    <body>
+        <div>
+            <div class = "navbar">
+                <div class = "back">
+                    <button class = "backBtn"><a href = "../index.html">Home</a></button>
+                </div>
+                <div class ="dropdown">
+                <button class = "dropBtn">Tools</button>
+                    <div class = "dropdown-content">
+                        <a href ="diceRollsPage.html">Dice Rolls</a>
+                        <a href = "tracker.html">Initiative Tracker</a>
+                        <a href ="extneralLinks.html">Links</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id = "tracker">
+            <table>
+                <thead>
+                    <tr>
+                        <td>---</td>
+                        <td>Character Name</td>
+                        <td>Intiative</td>
+                        <td>AC</td>
+                    </tr>   
+                </thead>
+                <tbody>
+                    <td><button onclick="addNew()">Add</button></td>
+                    <td><input id = "tracker-name" type ="text" max="25"></td>
+                    <td><input id = "tracker-int" type ="number" max="40"></td>
+                    <td><input id = "tracker-ac" type ="number" max="30"></td>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id = "tracker-parts">
+            <table id="tracker-table">
+                <thead>
+                    <tr>
+                        <td>---</td>
+                        <td>Character Name</td>
+                        <td>Intiative</td>
+                        <td>AC</td>
+                    </tr> 
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    <script src = "tracker.js"></script>
+</html>

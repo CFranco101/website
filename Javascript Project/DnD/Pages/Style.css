@@ -1,0 +1,286 @@
+/*CSS rules for website */
+
+html {margin:0; width:100%; background-color: #bc310f;}
+
+.navbar {
+    position: absolute;
+    top: 1vh;
+    margin-left: 10vw;
+    width: 75vw;
+    height: 5vh;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropBtn {
+    background-color:#f4a51d ;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #91081d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #600412;}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .dropBtn {
+    background-color: #b27813;
+    color: black;
+}
+
+.backBtn {
+    
+    background-color:#f4a51d ;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.back {
+    float: left;
+}
+
+/* sheet buttons on main page */
+
+.charsheet-container{
+    position: relative;
+    top: 50vh;
+    left: 30vw;
+    height: 15vh;
+    width: 50vw;
+    
+}
+
+.createsheet{
+    position: relative;
+    float: left;
+    margin: 20px;
+    height: 35px; 
+    width: 145px;
+    background-color:bisque;
+    color: darkslategray;
+    
+}
+
+.accesssheets{
+    position: relative;
+    float: left;
+    margin: 20px;
+    height: 35px; 
+    width: 145px;
+    background-color:bisque;
+    color: darkslategray;
+    
+}
+
+.viewsheets{
+    position: relative;
+    float: left;
+    margin: 20px;
+    height: 35px; 
+    width: 145px;
+    background-color:bisque;
+    color: darkslategray;
+    
+}
+
+.createsheet:hover{
+    background-color:burlywood;
+}
+
+.accesssheets:hover{
+    background-color:burlywood;
+}
+
+.viewsheets:hover{
+    background-color:burlywood;
+}
+
+/*-------------------------------------------------------------------------*/
+/*CSS rules for diceroll page */
+
+#dice-table{
+    background-color: antiquewhite;
+    width: 95%;
+    height: 80vh;
+    position: absolute;
+    top: 10vh; 
+    border-collapse: collapse;
+}
+
+.dice-pic{
+    
+}
+
+.button-roll{
+    background-color: cadetblue;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+.input-amount{
+    width: 35px;
+    margin: 5px;
+}
+
+.dice-results{
+    
+}
+    
+.dice-total{
+    
+}
+
+/*-------------------------------------------------------------------------*/
+/* character sheet page-editable*/
+
+
+#header {
+    height: 25vh;
+}
+
+#abilites {
+    
+}
+
+#skills {
+    float: left;
+}
+
+#skils-saving {
+    float:left;
+    width: 10%;
+}
+
+#skills-skills1 {
+    float:left;
+    width: 12%;
+}
+
+.module {
+    margin: 60px;
+    margin-top: 45px;
+    width: 90%;
+}
+
+.skills-stuff {
+    float:left;
+    margin-left: 4vw;
+}
+
+.header-elements {
+    float:left;
+    margin: 15px;
+}
+
+.ability-scores {
+    float:left;
+    margin: 10px;
+    width: 10vw;
+    
+}
+
+.ability-text {
+    text-align: center;
+}
+
+.ability-input{
+    margin-left: 45px;
+    width: 40px;
+}
+
+.skills-mod {
+    float:left;
+    margin: 10px;
+}
+
+.savethrow-div {
+    float:left;
+    width: 15%;
+    height: 25px;
+    
+}
+
+.saving-parts {
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+.skills-stats {
+    float:left;
+}
+
+.skills-input-stats {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.skills-input-text {
+    margin-left: 20px;
+}
+
+.submit-btn {
+    float:left;
+    margin-left: 10%; 
+    margin-bottom: 2.5%;
+    width: 100px;
+    height: 45px;
+    
+}
+/* ----------------------------------------------------------- */
+/* Int tracker page CSS rules */
+
+#tracker {
+    position: absolute;
+    top: 15vh;
+    left: 25vw;
+    max-width: 50vw;
+}
+
+#tracker-parts {
+    position: absolute;
+    top: 35vh;
+    left: 25vw;
+    max-width: 50vw;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*Rules for links pages. */
+
+.link-tabs {
+    position: absolute;
+    top: 15vh;
+    left: 15vw;
+    
+}

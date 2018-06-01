@@ -1,0 +1,73 @@
+html{background-color: #343434;}
+body{margin: 0;}
+
+/* Main navigation bar CSS Rules */
+#main-nav-bar{
+    position: fixed;
+    list-style-type: none;
+    padding: 0;
+    top:0;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: cadetblue;
+    z-index: 2;
+}
+
+.main-nav-bar-listItem {
+    float: left;
+}
+
+.main-nav-bar-ancItem {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main-nav-bar-ancItem:hover {
+    background-color: aquamarine;
+}
+
+/*Content Boxes CSS rules*/
+
+#home-main {
+    margin: 60px 0 5px 0;
+    height: 600px;
+    background: white;
+    opacity: 0.75;
+}
+
+#aboutMe-main {
+    margin: 10px 0 5px 0;
+    height: 600px;
+    background: burlywood;
+
+}
+
+#schoolWork-main {
+    margin: 10px 0 5px 0;
+    height: 600px;
+    background: darkgreen;
+}
+
+#info-main {
+    margin: 10px 0 5px 0;
+    height: 600px;
+    background: lime;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-size: 400%;
+    top: 45px;
+}
+
+p {
+    position: relative;
+    text-align: center;
+    top: 80px;
+}
