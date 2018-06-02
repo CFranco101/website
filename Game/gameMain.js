@@ -457,6 +457,7 @@ $(document).ready(function() {
                                 break;
                             case "Rogue":
                                 bleed = true;
+                                bleedTurn = 2;
                                 setTimeout(function () {
                                     damage = playerClass.specialTwoValue;
                                     document.getElementById("battle-info-status").innerHTML = currentMonster.name
