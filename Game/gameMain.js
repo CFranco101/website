@@ -294,7 +294,7 @@ $(document).ready(function() {
             else
                 return false;
         } else {
-            if ((chance + playerClass.specialTwoValue) >= (Math.random() * (100 - 1) + 1)) {
+            if ((chance) >= (Math.random() * (100 - 1) + 1)) {
                 lucky = false;
                 return true;
             }
