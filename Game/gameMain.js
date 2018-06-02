@@ -106,13 +106,13 @@ $(document).ready(function() {
         heavyAttackDamageMax: 16,
 
         pickAttack: function() {
-            this.pickNum = (Math.random()* (2 -1)+1);
-            if(this.pickNum === 1)
+            this.pickNum = (Math.random()* (4 -1)+1);
+            if(this.pickNum <= 3)
             {
                 this.currentAttack = "Normal Attack";
             }
 
-            if(this.pickNum === 2)
+            if(this.pickNum  > 3)
             {
                 this.currentAttack = "Heavy Attack";
             }
@@ -136,13 +136,13 @@ $(document).ready(function() {
         heavyAttackDamageMax: 25,
 
         pickAttack: function() {
-            this.pickNum = parseInt(Math.random()* (2 -1)+1);
-            if(this.pickNum === 1)
+            this.pickNum = (Math.random()* (4 -1)+1);
+            if(this.pickNum <= 3)
             {
                 this.currentAttack = "Normal Attack";
             }
 
-            if(this.pickNum === 2)
+            if(this.pickNum  > 3)
             {
                 this.currentAttack = "Heavy Attack";
             }
@@ -166,13 +166,13 @@ $(document).ready(function() {
         heavyAttackDamageMax: 25,
 
         pickAttack: function() {
-            this.pickNum = parseInt(Math.random()* (2 -1)+1);
-            if(this.pickNum === 1)
+            this.pickNum = (Math.random()* (4 -1)+1);
+            if(this.pickNum <= 3)
             {
                 this.currentAttack = "Normal Attack";
             }
 
-            if(this.pickNum === 2)
+            if(this.pickNum  > 3)
             {
                 this.currentAttack = "Heavy Attack";
             }
@@ -196,13 +196,13 @@ $(document).ready(function() {
         heavyAttackDamageMax: 22,
 
         pickAttack: function() {
-            this.pickNum = parseInt(Math.random()* (2 -1)+1);
-            if(this.pickNum === 1)
+            this.pickNum = (Math.random()* (4 -1)+1);
+            if(this.pickNum <= 3)
             {
                 this.currentAttack = "Normal Attack";
             }
 
-            if(this.pickNum === 2)
+            if(this.pickNum  > 3)
             {
                 this.currentAttack = "Heavy Attack";
             }
@@ -226,13 +226,13 @@ $(document).ready(function() {
         heavyAttackDamageMax: 35,
 
         pickAttack: function() {
-            this.pickNum = parseInt(Math.random()* (2 -1)+1);
-            if(this.pickNum === 1)
+            this.pickNum = (Math.random()* (4 -1)+1);
+            if(this.pickNum <= 3)
             {
                 this.currentAttack = "Normal Attack";
             }
 
-            if(this.pickNum === 2)
+            if(this.pickNum  > 3)
             {
                 this.currentAttack = "Heavy Attack";
             }
@@ -256,13 +256,13 @@ $(document).ready(function() {
         heavyAttackDamageMax: 26,
 
         pickAttack: function() {
-            this.pickNum = parseInt(Math.random()* (2 -1)+1);
-            if(this.pickNum === 1)
+            this.pickNum = (Math.random()* (4 -1)+1);
+            if(this.pickNum <= 3)
             {
                 this.currentAttack = "Normal Attack";
             }
 
-            if(this.pickNum === 2)
+            if(this.pickNum  > 3)
             {
                 this.currentAttack = "Heavy Attack";
             }
@@ -287,13 +287,17 @@ $(document).ready(function() {
     //functions to run Game
     function checkHit(chance){
         if(lucky === true) {
-            if ((chance + playerClass.specialTwoValue) >= (Math.random() * (100 - 1) + 1))
+            if ((chance + playerClass.specialTwoValue) >= (Math.random() * (100 - 1) + 1)) {
+                lucky = false;
                 return true;
+            }
             else
                 return false;
         } else {
-            if ((chance + playerClass.specialTwoValue) >= (Math.random() * (100 - 1) + 1))
+            if ((chance + playerClass.specialTwoValue) >= (Math.random() * (100 - 1) + 1)) {
+                lucky = false;
                 return true;
+            }
             else
                 return false;
         }
