@@ -8,21 +8,21 @@ $(document).ready(function() {
 
         basicAttackName:"Staff Blast",
         basicAttackInfo:"Standard attack with Staff",
-        basicAttackChance: 80,
-        basicAttackDamageMin: 3,
-        basicAttackDamageMax: 6,
+        basicAttackChance: 75,
+        basicAttackDamageMin: 6,
+        basicAttackDamageMax: 10,
 
         specialAttackName:"Fire Bolt",
         specialAttackInfo:"Heavy Damage from Fire!",
         specialAttackChance: 50,
-        specialAttackDamageMin: 10,
-        specialAttackDamageMax: 15,
+        specialAttackDamageMin: 24,
+        specialAttackDamageMax: 28,
 
         specialOneName:"Lighting Bolt",
         specialOneInfo:"Lighting struck!",
         specialOneChance: 25,
-        specialOneDamageMin: 25,
-        specialOneDamageMax:30,
+        specialOneDamageMin: 32,
+        specialOneDamageMax: 38,
 
         specialTwoName: "Lucky",
         specialTwoInfo: "Increase your Chance of hitting something!",
@@ -38,14 +38,14 @@ $(document).ready(function() {
         basicAttackName:"Sword Attack",
         basicAttackInfo:"Standard attack with Sword",
         basicAttackChance: 90,
-        basicAttackDamageMin: 1,
-        basicAttackDamageMax: 10,
+        basicAttackDamageMin: 2,
+        basicAttackDamageMax: 6,
 
         specialAttackName:"Rage Smash",
         specialAttackInfo:"With Rage do heavy damage!",
-        specialAttackChance: 25,
-        specialAttackDamageMin: 15,
-        specialAttackDamageMax: 20,
+        specialAttackChance: 50,
+        specialAttackDamageMin: 12,
+        specialAttackDamageMax: 18,
 
         specialOneName:"Drink Potion",
         specialOneInfo:"Gain some Health back",
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
         specialTwoName: "Rally",
         specialTwoInfo: "Influence enemy to attack themselves",
-        specialTwoChance: 15,
+        specialTwoChance: 25,
 
     };
 
@@ -66,15 +66,15 @@ $(document).ready(function() {
 
         basicAttackName:"Dagger Attack",
         basicAttackInfo:"Standard attack with dagger",
-        basicAttackChance: 70,
-        basicAttackDamageMin: 10,
-        basicAttackDamageMax: 16,
+        basicAttackChance: 80,
+        basicAttackDamageMin: 4,
+        basicAttackDamageMax: 10,
 
         specialAttackName:"Swift Strike",
         specialAttackInfo:"In the Shadows, the rogue strikes",
-        specialAttackChance: 20,
-        specialAttackDamageMin: 20,
-        specialAttackDamageMax: 22,
+        specialAttackChance: 60,
+        specialAttackDamageMin: 22,
+        specialAttackDamageMax: 28,
 
         specialOneName:"Dodge",
         specialOneInfo:"In the Shadows, rogue can dodge the next attack",
@@ -458,8 +458,12 @@ $(document).ready(function() {
                             case "Rogue":
                                 bleed = true;
                                 setTimeout(function () {
+                                    damage = playerClass.specialTwoValue;
                                     document.getElementById("battle-info-status").innerHTML = currentMonster.name
-                                        + " will now bleed for " + playerClass.specialTwoValue + " damage for two turns!";
+                                        + " is now bleeding for " + playerClass.specialTwoValue + " damage" +
+                                        "and for an extra two turns!";
+                                    currentMonster.currentHealth -= damage;
+                                    document.getElementById("battle-image-enemy-health").innerHTML = currentMonster.currentHealth;
                                 }, 5500);
                                 break;
                         }
@@ -912,38 +916,38 @@ $(document).ready(function() {
                 switch(playerClass.name){
                     case "Wizard":
                         playerClass.maxHealth +=  20;
-                        playerClass.basicAttackDamageMin += 6;
-                        playerClass.basicAttackDamageMax += 6;
+                        playerClass.basicAttackDamageMin += 3;
+                        playerClass.basicAttackDamageMax += 3;
                         playerClass.currentHealth = playerClass.maxHealth;
                         startRound(battleNum);
                         break;
                     case "Knight":
                         playerClass.maxHealth +=  30;
-                        playerClass.basicAttackDamageMin += 2;
-                        playerClass.basicAttackDamageMax += 2;
+                        playerClass.basicAttackDamageMin += 1;
+                        playerClass.basicAttackDamageMax += 1;
                         break;
                     case "Rogue":
                         playerClass.maxHealth +=  10;
-                        playerClass.basicAttackDamageMin += 4;
-                        playerClass.basicAttackDamageMax += 4;
+                        playerClass.basicAttackDamageMin += 2;
+                        playerClass.basicAttackDamageMax += 2;
                         break;
                 }
             } else if ($("#levelUp2").is(":checked") === true) {
                 switch(playerClass.name){
                     case "Wizard":
                         playerClass.specialOneDamageMin +=  10;
-                        playerClass.basicAttackDamageMin += 4;
-                        playerClass.basicAttackDamageMax += 4;
+                        playerClass.basicAttackDamageMin += 3;
+                        playerClass.basicAttackDamageMax += 3;
                         break;
                     case "Knight":
                         playerClass.specialOneValueMin +=  10;
-                        playerClass.basicAttackDamageMin += 2;
-                        playerClass.basicAttackDamageMax += 2;
+                        playerClass.basicAttackDamageMin += 1;
+                        playerClass.basicAttackDamageMax += 1;
                         break;
                     case "Rogue":
                         playerClass.specialOneChance +=  10;
-                        playerClass.basicAttackDamageMin += 6;
-                        playerClass.basicAttackDamageMax += 6;
+                        playerClass.basicAttackDamageMin += 2;
+                        playerClass.basicAttackDamageMax += 2;
                         break;
                 }
 
@@ -951,18 +955,18 @@ $(document).ready(function() {
                 switch(playerClass.name){
                     case "Wizard":
                         playerClass.specialTwoValue +=  10;
-                        playerClass.basicAttackDamageMin += 4;
-                        playerClass.basicAttackDamageMax += 4;
+                        playerClass.basicAttackDamageMin += 3;
+                        playerClass.basicAttackDamageMax += 3;
                         break;
                     case "Knight":
                         playerClass.specialTwoChance +=  10;
-                        playerClass.basicAttackDamageMin += 2;
-                        playerClass.basicAttackDamageMax += 2;
+                        playerClass.basicAttackDamageMin += 1;
+                        playerClass.basicAttackDamageMax += 1;
                         break;
                     case "Rogue":
                         playerClass.specialTwoValue +=  10;
-                        playerClass.basicAttackDamageMin += 6;
-                        playerClass.basicAttackDamageMax += 6;
+                        playerClass.basicAttackDamageMin += 2;
+                        playerClass.basicAttackDamageMax += 2;
                         break;
                 }
             }
