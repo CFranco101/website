@@ -285,6 +285,8 @@ $(document).ready(function() {
 
 
     //functions to run Game
+
+    //Returns true or false if attack hits depending on ability chance
     function checkHit(chance){
         if(lucky === true) {
             if ((chance + playerClass.specialTwoValue) >= (Math.random() * (100 - 1) + 1)) {
@@ -303,10 +305,12 @@ $(document).ready(function() {
         }
     }
 
+    //Returns damage amount based on a min and max value on abilities
     function damageAmount(min,max){
             return ((Math.random() * (max - min) + min));
     }
 
+    //Once player chooses their ability, this sets the round in motion
     function playerRound(name){
         $("#option-basicAttack").hide();
         $("#option-specialAttack").hide();
@@ -320,9 +324,10 @@ $(document).ready(function() {
                 monsterTurn();
             else
                 levelUp();
-        }, 6500);
+        }, 7000);
     }
 
+    //Check if monster still has health to continue the round
     function checkMonsterDeath(){
         if(currentMonster.currentHealth <= 0)
             return true;
@@ -330,6 +335,7 @@ $(document).ready(function() {
             return false
     }
 
+    //This is main function that helps check chance and damage and display them to player
     function displayAttack(name){
         switch (name){
             case "BasicAttack":
@@ -467,6 +473,7 @@ $(document).ready(function() {
         }
     }
 
+    //This runs all monsters functions and display them to the player
     function monsterTurn(){
         document.getElementById("battle-info-main").innerHTML = currentMonster.name + "'s Turn";
         if(dodge === true)
@@ -587,6 +594,7 @@ $(document).ready(function() {
         }
     }
 
+    //Opening scene
     function setBattle(num){
         document.getElementById("map-info").innerHTML = "Battle " + num;
         switch(num){
@@ -613,29 +621,34 @@ $(document).ready(function() {
 
     }
 
+    //Displays abilities to the player
     function fillAbilities(){
         document.getElementById("battle-class-basicAttack-name").innerHTML = playerClass.basicAttackName;
         document.getElementById("battle-class-basicAttack-info").innerHTML = playerClass.basicAttackInfo;
-        document.getElementById("battle-class-basicAttack-chance").innerHTML = playerClass.basicAttackChance.toString();
+        document.getElementById("battle-class-basicAttack-chance").innerHTML = playerClass.basicAttackChance.toString()
+            + "% ";
         document.getElementById("battle-class-basicAttack-values").innerHTML = playerClass.basicAttackDamageMin.toString()
         + " - " + playerClass.basicAttackDamageMax.toString() + " damage";
 
         document.getElementById("battle-class-specialAttack-name").innerHTML = playerClass.specialAttackName;
         document.getElementById("battle-class-specialAttack-info").innerHTML = playerClass.specialAttackInfo;
-        document.getElementById("battle-class-specialAttack-chance").innerHTML = playerClass.specialAttackChance.toString();
+        document.getElementById("battle-class-specialAttack-chance").innerHTML = playerClass.specialAttackChance.toString()
+            + "% ";
         document.getElementById("battle-class-specialAttack-values").innerHTML = playerClass.specialAttackDamageMin.toString()
         + " - " + playerClass.specialAttackDamageMax.toString() + " damage";
 
         if(playerClass.name === "Wizard") {
             document.getElementById("battle-class-special-name").innerHTML = playerClass.specialOneName;
             document.getElementById("battle-class-special-info").innerHTML = playerClass.specialOneInfo;
-            document.getElementById("battle-class-special-chance").innerHTML = playerClass.specialOneChance.toString();
+            document.getElementById("battle-class-special-chance").innerHTML = playerClass.specialOneChance.toString()
+                + "% ";
             document.getElementById("battle-class-special-values").innerHTML = playerClass.specialOneDamageMin.toString() +
             " - " + playerClass.specialOneDamageMax.toString() + " Damage";
 
             document.getElementById("battle-class-special2-name").innerHTML = playerClass.specialTwoName;
             document.getElementById("battle-class-special2-info").innerHTML = playerClass.specialTwoInfo;
-            document.getElementById("battle-class-special2-chance").innerHTML = playerClass.specialTwoChance.toString();
+            document.getElementById("battle-class-special2-chance").innerHTML = playerClass.specialTwoChance.toString()
+                + "% ";
             document.getElementById("battle-class-special2-values").innerHTML = " + " + playerClass.specialTwoValue.toString()
             + " chance";
         }
@@ -643,36 +656,42 @@ $(document).ready(function() {
         if(playerClass.name === "Knight") {
             document.getElementById("battle-class-special-name").innerHTML = playerClass.specialOneName;
             document.getElementById("battle-class-special-info").innerHTML = playerClass.specialOneInfo;
-            document.getElementById("battle-class-special-chance").innerHTML = playerClass.specialOneChance.toString();
+            document.getElementById("battle-class-special-chance").innerHTML = playerClass.specialOneChance.toString()
+                + "% ";
             document.getElementById("battle-class-special-values").innerHTML = playerClass.specialOneValueMin.toString() +
                 " - " + playerClass.specialOneValueMax.toString() + " Heal Amount";
 
             document.getElementById("battle-class-special2-name").innerHTML = playerClass.specialTwoName;
             document.getElementById("battle-class-special2-info").innerHTML = playerClass.specialTwoInfo;
-            document.getElementById("battle-class-special2-chance").innerHTML = playerClass.specialTwoChance.toString();
+            document.getElementById("battle-class-special2-chance").innerHTML = playerClass.specialTwoChance.toString()
+                + "% ";
 
         }
 
         if(playerClass.name === "Rogue") {
             document.getElementById("battle-class-special-name").innerHTML = playerClass.specialOneName;
             document.getElementById("battle-class-special-info").innerHTML = playerClass.specialOneInfo;
-            document.getElementById("battle-class-special-chance").innerHTML = playerClass.specialOneChance.toString();
+            document.getElementById("battle-class-special-chance").innerHTML = playerClass.specialOneChance.toString()
+                + "% ";
 
             document.getElementById("battle-class-special2-name").innerHTML = playerClass.specialTwoName;
             document.getElementById("battle-class-special2-info").innerHTML = playerClass.specialTwoName;
-            document.getElementById("battle-class-special2-chance").innerHTML = playerClass.specialTwoChance.toString();
+            document.getElementById("battle-class-special2-chance").innerHTML = playerClass.specialTwoChance.toString()
+                + "% ";
             document.getElementById("battle-class-special2-values").innerHTML = playerClass.specialTwoValue.toString()
             + " damage per round";
         }
 
     }
 
+    //helps start up the game
     function setRPG(classPicked){
         setClass(classPicked);
         $("#pickClass").hide();
         setBattle(battleNum);
     }
 
+    //adjusts the image of the monster and assings monster to variable object
     function getMonster(num) {
         switch(num){
             case 1:
@@ -702,6 +721,7 @@ $(document).ready(function() {
         }
     }
 
+    //after leveling up, rounds start with this
     function startRound(num){
         $("#levelUp").hide();
         playerClass.currentHealth = playerClass.maxHealth;
@@ -722,6 +742,7 @@ $(document).ready(function() {
         $("#battle-class-fight").show();
     }
 
+    //Sets a copy of the chosen class
     function setClass(setClass){
         if(setClass === "wizard"){
             playerClass = Object.assign({},wizard);
@@ -744,6 +765,7 @@ $(document).ready(function() {
 
     }
 
+    //Shows the level up choices depending of classes
     function levelUp(){
         if(battleNum >= 6) {
             winner();
@@ -772,15 +794,16 @@ $(document).ready(function() {
 
     }
 
+    //Once a player and the monster have their tun, it resets
     function resetRound(){
+        clearTimeout();
         if(bleed === true && bleedTurn !== 0)
         {
-            clearTimeout();
             setTimeout(function() {
                 document.getElementById("battle-info-status").innerHTML = currentMonster.name + " is bleeding! " +
                     currentMonster.name + " took " + playerClass.specialTwoValue + " damage!";
                 bleedTurn -= 1;
-            },0);
+            },1000);
             if(currentMonster.currentHealth <= 0){
                 setTimeout(function(){
                     levelUp();
@@ -800,20 +823,23 @@ $(document).ready(function() {
 
             },3000);}
         }else{
-            bleedTurn = 2;
-            document.getElementById("battle-info-main").innerHTML = "Your Turn";
-            $("#option-basicAttack").show();
-            $("#option-specialAttack").show();
-            $("#option-SpecialOne").show();
-            $("#option-SpecialTwo").show();
-            $("#battle-class-fight").show();
+            setTimeout(function () {
+                bleedTurn = 2;
+                document.getElementById("battle-info-main").innerHTML = "Your Turn";
+                $("#option-basicAttack").show();
+                $("#option-specialAttack").show();
+                $("#option-SpecialOne").show();
+                $("#option-SpecialTwo").show();
+                $("#battle-class-fight").show();
 
-            currentMonster.pickAttack();
-            document.getElementById("battle-info-status").innerHTML = currentMonster.name + "'s next attack will be a "
-                + currentMonster.currentAttack;
+                currentMonster.pickAttack();
+                document.getElementById("battle-info-status").innerHTML = currentMonster.name + "'s next attack will be a "
+                    + currentMonster.currentAttack;
+            },2500);
         }
     }
 
+    //checks if the player has 0 health, if so give player the game over scene
     function checkPlayerDeath(){
         if(playerClass.currentHealth <= 0)
             return true;
@@ -821,12 +847,14 @@ $(document).ready(function() {
             return false;
     }
 
+    //gives game over screen
     function gameOver(){
         $("#battle").hide();
         $("#levelUp").hide();
         $("#gameOver").show();
     }
 
+    //gives Winning screen
     function winner(){
         $("#battle").hide();
         $("#levelUp").hide();
@@ -876,7 +904,7 @@ $(document).ready(function() {
             alert("Please select a move to fight!");
         }
 
-    })
+    });
 
     $("#levelUp-submit").click(function (){
         if($("input:radio[name='class-levelUp']").is(":checked") === true) {
