@@ -695,7 +695,7 @@ $(document).ready(function() {
         setBattle(battleNum);
     }
 
-    //adjusts the image of the monster and assings monster to variable object
+    //adjusts the image of the monster and assigns monster to variable object
     function getMonster(num) {
         switch(num){
             case 1:
@@ -807,6 +807,9 @@ $(document).ready(function() {
                 document.getElementById("battle-info-status").innerHTML = currentMonster.name + " is bleeding! " +
                     currentMonster.name + " took " + playerClass.specialTwoValue + " damage!";
                 bleedTurn -= 1;
+                damage  = playerClass.specialTwoValue;
+                currentMonster.currentHealth -= damage;
+                document.getElementById("battle-image-enemy-health").innerHTML = currentMonster.currentHealth;
             },1000);
             if(currentMonster.currentHealth <= 0){
                 setTimeout(function(){
