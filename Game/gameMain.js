@@ -106,7 +106,7 @@ $(document).ready(function() {
         heavyAttackDamageMax: 16,
 
         pickAttack: function() {
-            this.pickNum = parseInt(Math.random()* (2 -1)+1);
+            this.pickNum = (Math.random()* (2 -1)+1);
             if(this.pickNum === 1)
             {
                 this.currentAttack = "Normal Attack";
@@ -269,8 +269,7 @@ $(document).ready(function() {
         }
     };
 
-
-    //constant variables
+    //variables
     var playerClass;
     var battleNum = 1;
     var currentMonster;
@@ -287,10 +286,17 @@ $(document).ready(function() {
 
     //functions to run Game
     function checkHit(chance){
-        if(chance >= (Math.random() * (100 - 1 ) + 1))
-            return true;
-        else
-            return false;
+        if(lucky === true) {
+            if ((chance + playerClass.specialTwoValue) >= (Math.random() * (100 - 1) + 1))
+                return true;
+            else
+                return false;
+        } else {
+            if ((chance + playerClass.specialTwoValue) >= (Math.random() * (100 - 1) + 1))
+                return true;
+            else
+                return false;
+        }
     }
 
     function damageAmount(min,max){
@@ -331,10 +337,6 @@ $(document).ready(function() {
                                 + " hits! ";
                         }, 3000);
                         damage = parseInt(damageAmount(playerClass.basicAttackDamageMin, playerClass.basicAttackDamageMax));
-                        if(lucky === true) {
-                            damage += playerClass.specialTwoValue;
-                            lucky = false;
-                        }
                         setTimeout(function () {
                             document.getElementById("battle-info-status").innerHTML = playerClass.basicAttackName
                                 + " dealt " + damage.toString() + " damage!";
@@ -348,8 +350,7 @@ $(document).ready(function() {
                                 + " misses  ";
                         }, 3000);
                     }
-
-                break;
+                    break;
             case "SpecialAttack":
                 document.getElementById("battle-info-status").innerHTML = playerClass.name + " used " +
                     playerClass.specialAttackName;
@@ -359,10 +360,6 @@ $(document).ready(function() {
                                 + " hits! ";
                         }, 3000);
                         damage = parseInt(damageAmount(playerClass.specialAttackDamageMin, playerClass.specialAttackDamageMax));
-                        if(lucky === true) {
-                            damage += playerClass.specialTwoValue;
-                            lucky = false;
-                        }
                         setTimeout(function () {
                             document.getElementById("battle-info-status").innerHTML = playerClass.specialAttackName
                                 + " dealt " + damage.toString() + " damage!";
@@ -388,10 +385,6 @@ $(document).ready(function() {
                         switch (playerClass.name) {
                             case "Wizard":
                                 damage = parseInt(damageAmount(playerClass.specialOneDamageMin, playerClass.specialOneDamageMax));
-                                if(lucky === true) {
-                                    damage += playerClass.specialTwoValue;
-                                    lucky = false;
-                                }
                                 setTimeout(function () {
                                     document.getElementById("battle-info-status").innerHTML = playerClass.specialOneName
                                         + " deals " + damage.toString() + " damage!";
@@ -948,5 +941,4 @@ $(document).ready(function() {
             alert("Get your free upgrade! Pls you will need it!");
         }
     });
-
 });
